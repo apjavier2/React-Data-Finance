@@ -21,11 +21,11 @@ const Navbar = () => {
       </ul>
       {/*Icon will be hidden in desktop view. Will only show in small devices*/}
       <div onClick={navHandler} className="block md:hidden">
-        {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
       <div
         className={
-          !nav
+          nav
             ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500"
             : "ease-in-out duration-500 fixed left-[-100%]"
         }
